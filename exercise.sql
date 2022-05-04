@@ -169,3 +169,99 @@ exercise> insert into `teacher` value ('3','王八','262186848','手搓芯片教
 [2022-04-28 17:32:50] 3 ms 中有 1 行受到影响
 exercise> insert into `teacher` value ('4','王十','562186848','摸鱼教研室')
 [2022-04-28 17:33:18] 3 ms 中有 1 行受到影响
+[2022-05-04 15:14:55] 已连接
+exercise> use exercise
+[2022-05-04 15:14:55] 在 2 ms 内完成
+exercise> delete from student where student_id=10
+[2022-05-04 15:14:55] 12 ms 中有 1 行受到影响
+exercise> insert into student (student_id, student_age, student_sex, student_name, student_phone, student_status, student_college, student_major, collage_number) VALUES
+                  ('10','18','男','第十个','152345678','学生','互联网+','软件开发','1')
+[2022-05-04 15:17:40] 5 ms 中有 1 行受到影响
+exercise> select * from exercise.student where student_age>17
+[2022-05-04 15:22:59] 在 60 ms (execution: 6 ms, fetching: 54 ms) 内检索到从 1 开始的 27 行
+exercise> select * from exercise.student where student_phone like '%$7%'
+[2022-05-04 15:29:01] 在 35 ms (execution: 6 ms, fetching: 29 ms) 内检索到 0 行
+exercise> select * from exercise.student where student_phone like '%7%'
+[2022-05-04 15:29:11] 在 34 ms (execution: 5 ms, fetching: 29 ms) 内检索到从 1 开始的 29 行
+exercise> select * from exercise.student where student_phone and student_name
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '张三'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '张四'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '张五'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '张六'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '张七'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '张八'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '张九'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '张十'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '第十个'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] [22007][1292] Truncated incorrect DOUBLE value: '子俊大大'
+[2022-05-04 15:31:20] 在 52 ms (execution: 27 ms, fetching: 25 ms) 内检索到 0 行
+exercise> select * from exercise.student where student_phone like '%$1%' and student_id>'10'
+[2022-05-04 15:32:13] 在 48 ms (execution: 6 ms, fetching: 42 ms) 内检索到 0 行
+exercise> select * from exercise.student where student_phone like '%$1%' and student_sex='男'
+[2022-05-04 15:32:56] 在 31 ms (execution: 4 ms, fetching: 27 ms) 内检索到 0 行
+exercise> select * from exercise.student where student_sex between 17 and 18
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '女'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '女'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] [22007][1292] Truncated incorrect DOUBLE value: '男'
+[2022-05-04 15:34:55] 在 36 ms (execution: 11 ms, fetching: 25 ms) 内检索到 0 行
+exercise> select * from exercise.student where student_sex between '17' and '18'
+[2022-05-04 15:35:12] 在 48 ms (execution: 5 ms, fetching: 43 ms) 内检索到 0 行
+exercise> select * from exercise.student where student_sex is null
+[2022-05-04 15:35:33] 在 44 ms (execution: 4 ms, fetching: 40 ms) 内检索到 0 行
+exercise> select * from exercise.student where student_sex is not null
+[2022-05-04 15:35:39] 在 34 ms (execution: 5 ms, fetching: 29 ms) 内检索到从 1 开始的 29 行
+exercise> select avg(student_age) from student group by student_age>=20
+[2022-05-04 15:40:03] 在 45 ms (execution: 7 ms, fetching: 38 ms) 内检索到从 1 开始的 2 行
+[2022-05-04 16:03:52] 已连接
+exercise> use exercise
+[2022-05-04 16:03:52] 在 2 ms 内完成
+exercise> select * from student,teacher,college
+[2022-05-04 16:03:52] 在 84 ms (execution: 8 ms, fetching: 76 ms) 内检索到从 1 开始的 500 行
+exercise> select * from teacher
+[2022-05-04 16:05:09] 在 88 ms (execution: 5 ms, fetching: 83 ms) 内检索到从 1 开始的 9 行
+
